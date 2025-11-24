@@ -29,6 +29,7 @@ def generate_jwk_from_pem(pem_key: str, alg: str = "RS384") -> dict:
    
     jwk = {   
         "kty": "RSA",   
+        "use": "sig",   
         "alg": alg,   
         "n": b64url_encode(n_bytes),   
         "e": b64url_encode(e_bytes),   
